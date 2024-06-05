@@ -1,0 +1,974 @@
+Last login: Tue Jun  4 16:51:10 on ttys001
+(base) gilraitses@Gils-MacBook-Air ~ % conda activate idtrackerai
+(idtrackerai) gilraitses@Gils-MacBook-Air ~ % idtrackerai
+17:58:05 Welcome to idtracker.ai                              init_logger.py:100
+         Running idtracker.ai '5.2.11' on Python '3.11.9'     init_logger.py:101
+         Platform: 'macOS-14.5-arm64-arm-64bit'                                 
+         Date: 2024-06-04 17:58:05                                              
+         Writing log in /Users/gilraitses/idtrackerai.log     init_logger.py:106
+         No parameter files detected                              __main__.py:45
+         No terminal arguments detected                           __main__.py:53
+         Initializing SegmentationGUI with PyQt5 5.15.10     GUI_main_base.py:34
+18:10:37 Generating frame stack for background subtraction   segmentation.py:251
+         with 50 samples                                                        
+18:10:39 Computing background (50 iterations). It took 0:00:02  bkg_widget.py:63
+         Computing background from a frame stack using       segmentation.py:313
+         'median'                                                               
+18:11:18 GUI params:                                                 main.py:288
+                         video_paths=['/Users/gilraitses/Documents/M            
+         irna Lab/videos/200x                                                   
+         clips/track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#            
+         T_Bl_Sq_2to7P_15_1_3_202402131442.mp4']                                
+                       intensity_ths=[90, 255]                                  
+                            area_ths=[1.0, inf]                                 
+                  tracking_intervals=None                                       
+                   number_of_animals=11                                         
+                             use_bkg=True                                       
+                  check_segmentation=False                                      
+                resolution_reduction=1.0                                        
+                 track_wo_identities=False                                      
+                            roi_list=['+ Polygon [[25.7, 0.6], [0.3,            
+         20.9], [0.8, 1901.0], [7.3, 1920.6], [1891.8, 1918.1],                 
+         [1919.3, 1894.6], [1920.4, 18.3], [1876.3, -2.2]]',                    
+                                      '- Polygon [[168.1, 919.2],               
+         [188.3, 928.6], [197.4, 939.1], [188.3, 944.5], [160.5,                
+         934.5], [168.5, 918.6]]',                                              
+                                      '- Polygon [[1634.0, 1475.3],             
+         [1625.8, 1488.9], [1645.7, 1490.2], [1645.7, 1477.1]]',                
+                                      '- Polygon [[1332.5, 1500.4],             
+         [1322.6, 1511.9], [1336.5, 1519.9], [1351.6, 1505.3],                  
+         [1337.1, 1498.1]]',                                                    
+                                      '- Polygon [[354.1, 1601.1],              
+         [346.8, 1641.1], [379.5, 1629.0], [374.7, 1587.8]]',                   
+                                      '- Polygon [[742.8, 1385.0],              
+         [747.3, 1396.6], [758.2, 1389.9], [757.0, 1360.7], [740.0,             
+         1375.3]]']                                                             
+         background_subtraction_stat='median'                                   
+         Using PyTorch 2.3.0                                         utils.py:16
+         Using MacOS Metal backend                                   utils.py:22
+18:11:19 Initializing Session                                     session.py:148
+         Setting video paths to:                                  session.py:157
+             /Users/gilraitses/Documents/Mirna Lab/videos/200x                  
+         clips/track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2               
+         _3#T_Bl_Sq_2to7P_15_1_3_202402131442.mp4                               
+         The session has 1800 frames (4 episodes)                 session.py:197
+                 Episode 0, frames (0 => 450) of                  session.py:204
+         /track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_               
+         Bl_Sq_2to7P_15_1_3_202402131442.mp4                                    
+                 Episode 1, frames (450 => 900) of                session.py:204
+         /track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_               
+         Bl_Sq_2to7P_15_1_3_202402131442.mp4                                    
+                 Episode 2, frames (900 => 1350) of               session.py:204
+         /track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_               
+         Bl_Sq_2to7P_15_1_3_202402131442.mp4                                    
+                 Episode 3, frames (1350 => 1800) of              session.py:204
+         /track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_               
+         Bl_Sq_2to7P_15_1_3_202402131442.mp4                                    
+         No session name provided, assigning name                 session.py:216
+         "track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_               
+         Bl_Sq_2to7P_15_1_3_202402131442"                                       
+         Directory /Users/gilraitses/Documents/Mirna Lab/videos/200x   run.py:25
+         clips/session_track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1          
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442 has been created               
+         Directory /Users/gilraitses/Documents/Mirna Lab/videos/200x   run.py:25
+         clips/session_track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1          
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442/preprocessing has              
+         been created                                                           
+         ROI mask saved at /Users/gilraitses/Documents/Mirna      session.py:343
+         Lab/videos/200x                                                        
+         clips/session_track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to4               
+         36P_15_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442/preprocessi               
+         ng/ROI_mask.png                                                        
+         Number of parallel jobs: 4                               session.py:258
+         Background saved at /Users/gilraitses/Documents/Mirna    session.py:320
+         Lab/videos/200x                                                        
+         clips/session_track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to4               
+         36P_15_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442/preprocessi               
+         ng/background.png                                                      
+         START Tracking session                                        run.py:25
+         Saving Session object in /Users/gilraitses/Documents/Mirna    run.py:27
+         Lab/videos/200x                                                        
+         clips/session_track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1          
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442/session.json                   
+         START Animal detection                                        run.py:29
+         Directory /Users/gilraitses/Documents/Mirna Lab/videos/200x   run.py:29
+         clips/session_track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1          
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442/bounding_box_images            
+         has been created                                                       
+         Using previously computed background model from animals_detection.py:32
+         GUI                                                                    
+         Segmenting video, 4 episodes in 4 parallel jobs     segmentation.py:207
+         Saving bounding box images in                       segmentation.py:210
+         /Users/gilraitses/Documents/Mirna Lab/videos/200x                      
+         clips/session_track01_a_Gr21a@Chrimson(3)_T_Re_Sq_2                    
+         19to436P_15_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442/b                    
+         ounding_box_images                                                     
+18:11:23 Segmenting video (4 iterations). It took        animals_detection.py:55
+         0:00:04                                                                
+18:11:24 Generating ListOfBlobs object                       list_of_blobs.py:26
+         13447 detected blobs in total                   animals_detection.py:65
+         ERROR An error occurred, saving data before printing          run.py:74
+         traceback and exiting the program                                      
+         Saving Session object in /Users/gilraitses/Documents/Mirna    run.py:78
+         Lab/videos/200x                                                        
+         clips/session_track01_a_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1          
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442/session.json                   
+         CRITICAL There is no frames where the number of      init_logger.py:127
+         blobs is equal to the number of animals stated by                      
+         the user. Idtracker.ai needs those frame to work                       
+         (from animals_detection/animals_detection.py:89)                       
+(idtrackerai) gilraitses@Gils-MacBook-Air ~ % idtrackeraiu
+zsh: command not found: idtrackeraiu
+(idtrackerai) gilraitses@Gils-MacBook-Air ~ % idtrackerai
+18:11:46 Welcome to idtracker.ai                              init_logger.py:100
+         Running idtracker.ai '5.2.11' on Python '3.11.9'     init_logger.py:101
+         Platform: 'macOS-14.5-arm64-arm-64bit'                                 
+         Date: 2024-06-04 18:11:46                                              
+         Writing log in /Users/gilraitses/idtrackerai.log     init_logger.py:106
+         No parameter files detected                              __main__.py:45
+         No terminal arguments detected                           __main__.py:53
+         Initializing SegmentationGUI with PyQt5 5.15.10     GUI_main_base.py:34
+11:21:35 Generating frame stack for background subtraction   segmentation.py:251
+         with 50 samples                                                        
+11:21:37 Computing background (50 iterations). It took 0:00:02  bkg_widget.py:63
+         Computing background from a frame stack using       segmentation.py:313
+         'median'                                                               
+11:21:45 Computing background from a frame stack using 'min' segmentation.py:313
+11:22:04 GUI params:                                                 main.py:288
+                         video_paths=['/Users/gilraitses/Documents/M            
+         irna                                                                   
+         Lab/videos/Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_Bl_            
+         Sq_2to7P_15_1_3_202402131442_3x.mp4']                                  
+                       intensity_ths=[120, 255]                                 
+                            area_ths=[50, 194]                                  
+                  tracking_intervals=None                                       
+                   number_of_animals=11                                         
+                             use_bkg=True                                       
+                  check_segmentation=False                                      
+                resolution_reduction=1.0                                        
+                 track_wo_identities=False                                      
+                            roi_list=None                                       
+         background_subtraction_stat='min'                                      
+11:22:05 Using PyTorch 2.3.0                                         utils.py:16
+         Using MacOS Metal backend                                   utils.py:22
+         Initializing Session                                     session.py:148
+         Setting video paths to:                                  session.py:157
+             /Users/gilraitses/Documents/Mirna                                  
+         Lab/videos/Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_               
+         Bl_Sq_2to7P_15_1_3_202402131442_3x.mp4                                 
+         The session has 12000 frames (24 episodes)               session.py:197
+         No session name provided, assigning name                 session.py:216
+         "Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_Bl_Sq_2to7               
+         P_15_1_3_202402131442_3x"                                              
+         Directory /Users/gilraitses/Documents/Mirna                   run.py:25
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x has been created                 
+         Directory /Users/gilraitses/Documents/Mirna                   run.py:25
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x/preprocessing has been           
+         created                                                                
+         Number of parallel jobs: 4                               session.py:258
+         Background saved at /Users/gilraitses/Documents/Mirna    session.py:320
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x/preprocessing               
+         /background.png                                                        
+         START Tracking session                                        run.py:25
+         Saving Session object in /Users/gilraitses/Documents/Mirna    run.py:27
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x/session.json                     
+         START Animal detection                                        run.py:29
+         Directory /Users/gilraitses/Documents/Mirna                   run.py:29
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x/bounding_box_images has          
+         been created                                                           
+         Using previously computed background model from animals_detection.py:32
+         GUI                                                                    
+         Segmenting video, 24 episodes in 4 parallel jobs    segmentation.py:207
+         Saving bounding box images in                       segmentation.py:210
+         /Users/gilraitses/Documents/Mirna                                      
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to4                    
+         36P_15_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x/bou                    
+         nding_box_images                                                       
+11:22:31 Segmenting video (24 iterations). It took       animals_detection.py:55
+         0:00:25                                                                
+         Generating ListOfBlobs object                       list_of_blobs.py:26
+         61986 detected blobs in total                   animals_detection.py:65
+         ERROR An error occurred, saving data before printing          run.py:74
+         traceback and exiting the program                                      
+         Saving Session object in /Users/gilraitses/Documents/Mirna    run.py:78
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x/session.json                     
+         CRITICAL There is no frames where the number of      init_logger.py:127
+         blobs is equal to the number of animals stated by                      
+         the user. Idtracker.ai needs those frame to work                       
+         (from animals_detection/animals_detection.py:89)                       
+(idtrackerai) gilraitses@Gils-MacBook-Air ~ % idtrackerai
+11:23:00 Welcome to idtracker.ai                              init_logger.py:100
+         Running idtracker.ai '5.2.11' on Python '3.11.9'     init_logger.py:101
+         Platform: 'macOS-14.5-arm64-arm-64bit'                                 
+         Date: 2024-06-05 11:23:00                                              
+         Writing log in /Users/gilraitses/idtrackerai.log     init_logger.py:106
+         No parameter files detected                              __main__.py:45
+         No terminal arguments detected                           __main__.py:53
+         Initializing SegmentationGUI with PyQt5 5.15.10     GUI_main_base.py:34
+11:56:36 Generating frame stack for background subtraction   segmentation.py:251
+         with 50 samples                                                        
+11:56:38 Computing background (50 iterations). It took 0:00:02  bkg_widget.py:63
+         Computing background from a frame stack using       segmentation.py:313
+         'median'                                                               
+11:57:31 Computing background from a frame stack using 'min' segmentation.py:313
+11:57:40 GUI params:                                                 main.py:288
+                         video_paths=['/Users/gilraitses/Documents/M            
+         irna                                                                   
+         Lab/videos/Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_Bl_            
+         Sq_2to7P_15_1_3_202402131442_3x.mp4']                                  
+                       intensity_ths=[103, 255]                                 
+                            area_ths=[24.0, inf]                                
+                  tracking_intervals=None                                       
+                   number_of_animals=11                                         
+                             use_bkg=True                                       
+                  check_segmentation=False                                      
+                resolution_reduction=1.0                                        
+                 track_wo_identities=False                                      
+                            roi_list=None                                       
+         background_subtraction_stat='min'                                      
+11:57:41 Using PyTorch 2.3.0                                         utils.py:16
+         Using MacOS Metal backend                                   utils.py:22
+         Initializing Session                                     session.py:148
+         Setting video paths to:                                  session.py:157
+             /Users/gilraitses/Documents/Mirna                                  
+         Lab/videos/Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_               
+         Bl_Sq_2to7P_15_1_3_202402131442_3x.mp4                                 
+         The session has 12000 frames (24 episodes)               session.py:197
+         No session name provided, assigning name                 session.py:216
+         "Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_Bl_Sq_2to7               
+         P_15_1_3_202402131442_3x"                                              
+         A session with the assigned name                         session.py:226
+         ("Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_Bl_Sq_2to               
+         7P_15_1_3_202402131442_3x") already exists, renaming                   
+         current session to                                                     
+         "Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3#T_Bl_Sq_2to7               
+         P_15_1_3_202402131442_3x_1"                                            
+         Directory /Users/gilraitses/Documents/Mirna                   run.py:25
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1 has been created               
+         Directory /Users/gilraitses/Documents/Mirna                   run.py:25
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/preprocessing has              
+         been created                                                           
+         Number of parallel jobs: 4                               session.py:258
+11:57:42 Background saved at /Users/gilraitses/Documents/Mirna    session.py:320
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/preprocessi               
+         ng/background.png                                                      
+         START Tracking session                                        run.py:25
+         Saving Session object in /Users/gilraitses/Documents/Mirna    run.py:27
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/session.json                   
+         START Animal detection                                        run.py:29
+         Directory /Users/gilraitses/Documents/Mirna                   run.py:29
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/bounding_box_images            
+         has been created                                                       
+         Using previously computed background model from animals_detection.py:32
+         GUI                                                                    
+         Segmenting video, 24 episodes in 4 parallel jobs    segmentation.py:207
+         Saving bounding box images in                       segmentation.py:210
+         /Users/gilraitses/Documents/Mirna                                      
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to4                    
+         36P_15_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/b                    
+         ounding_box_images                                                     
+11:58:07 Segmenting video (24 iterations). It took       animals_detection.py:55
+         0:00:25                                                                
+         Generating ListOfBlobs object                       list_of_blobs.py:26
+         125019 detected blobs in total                  animals_detection.py:65
+         There are 0 frames with more blobs than        animals_detection.py:102
+         animals                                                                
+         FINISH Animal detection, it took 0:00:25                      run.py:29
+         Saving Session object in /Users/gilraitses/Documents/Mirna    run.py:31
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/session.json                   
+         Saving ListOfBlobs at /Users/gilraitses/Documents/Mirna       run.py:31
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/preprocessing/list_of          
+         _blobs.pickle                                                          
+11:58:08 START Crossing detection                                      run.py:33
+         Computing body lengths (12000 iterations). It took       __init__.py:25
+         0:00:00                                                                
+         Median body length: 15.0 pixels                        model_area.py:95
+         Identification image size set to [10, 10, 1]             session.py:298
+         Directory /Users/gilraitses/Documents/Mirna                   run.py:33
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/identification_images          
+          has been created                                                      
+11:58:12 Setting images for identification (24 iterations). It    __init__.py:30
+         took 0:00:03                                                           
+11:58:13 Connecting blobs (12000 iterations). It took 0:00:01     __init__.py:36
+         Classifying Blobs as individuals or crossings   crossing_detector.py:27
+         depending on their area and the number of blobs                        
+         in the frame                                                           
+         Initializing ModelArea for individual/crossing blob    model_area.py:40
+         initial classification                                                 
+         Model area computed with 63503 blobs. Mean area =      model_area.py:66
+         65.7, median = 57.0, and std = 29.8 (in pixels)                        
+         Get list of blobs for training, validation and  crossings_dataset.py:19
+         eval                                                                   
+         First individual/crossing assignment (12000     crossing_detector.py:46
+         iterations). It took 0:00:00                                           
+         63503 sure individuals and 1 sure crossings     crossings_dataset.py:47
+         2700 individual and 1 crossing blobs for        crossings_dataset.py:85
+         training                                                               
+         300 individual and 0 crossing blobs for                                
+         validation                                                             
+         61515 unknown blobs                             crossing_detector.py:57
+         There are not enough crossings to train the     crossing_detector.py:63
+         crossing detector                                                      
+         FINISH Crossing detection, it took 0:00:05                    run.py:33
+         Saving Session object in /Users/gilraitses/Documents/Mirna    run.py:35
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/session.json                   
+         Saving ListOfBlobs at /Users/gilraitses/Documents/Mirna       run.py:35
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/preprocessing/list_of          
+         _blobs.pickle                                                          
+11:58:14 START Fragmentation                                           run.py:37
+         Fragmenting blobs (12000 iterations). It took       fragmentation.py:25
+         0:00:00                                                                
+         Creating list of fragments                     list_of_fragments.py:593
+11:58:15 Connecting coexisting fragments (12000          list_of_fragments.py:56
+         iterations). It took 0:00:00                                           
+         281 Fragments in total, 255 individuals and 26      fragmentation.py:30
+         crossings                                                              
+         Total number of Global Fragments: 94     list_of_global_fragments.py:47
+         Of which 72 are long enough to be        list_of_global_fragments.py:51
+         accumulated                                                            
+         FINISH Fragmentation, it took 0:00:00                         run.py:37
+         Saving Session object in /Users/gilraitses/Documents/Mirna    run.py:41
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/session.json                   
+         Saving ListOfBlobs at /Users/gilraitses/Documents/Mirna       run.py:41
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/preprocessing/list_of          
+         _blobs.pickle                                                          
+         Saving ListOfFragments as /Users/gilraitses/Documents/Mirna   run.py:41
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/preprocessing/list_of          
+         _fragments.json                                                        
+         Saving ListOfGlobalFragments at                               run.py:41
+         /Users/gilraitses/Documents/Mirna                                      
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/preprocessing/list_of          
+         _global_fragments.json                                                 
+         START Tracking                                                run.py:43
+         Deleting ListOfBlobs to save memory, it will be reloaded __init__.py:39
+         from disk after tracking                                               
+         Tracking with identities                                  tracker.py:36
+         Directory /Users/gilraitses/Documents/Mirna              __init__.py:52
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/accumulatio               
+         n_0 has been created                                                   
+         Saving NetworkParams at                            network_params.py:74
+         /Users/gilraitses/Documents/Mirna                                      
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to                     
+         436P_15_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1                     
+         /accumulation_0/model_params.json                                      
+         Directory /Users/gilraitses/Documents/Mirna               tracker.py:50
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15              
+         _2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/accumulation_              
+         0 already exists                                                       
+         START Protocol 2                                          tracker.py:51
+11:58:16 Resetting ListOfFragments to 'fragmentation'              tracker.py:51
+         Creating CNN model                                         models.py:12
+         Reinitializing model                                       models.py:47
+         Using the Global Fragment starting at frame     identity_transfer.py:22
+         9126 as the first one in accumulation                                  
+         Tracking without identity transfer, assigning   identity_transfer.py:57
+         random initial identities                                              
+         Initializing accumulation manager            accumulation_manager.py:53
+         There are global fragments acceptable for    accumulation_manager.py:79
+         training                                                               
+         Performing new accumulation, step 0                   accumulator.py:37
+         48438 new images for training               accumulation_manager.py:105
+         48438 images in total, 41.72% of the total  accumulation_manager.py:113
+         accumulable                                                            
+         Gathered 25721 labeled images (new and      accumulation_manager.py:186
+         used) for continuous training                                          
+         Loading identification images from disk (24           accumulator.py:58
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 23147 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 2574 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Entering the training loop...                              train.py:115
+12:00:37 Overfitting                                                train.py:131
+         Last epoch: Epoch 48: training loss = 0.05017, validation  train.py:132
+         loss = 0.45814 and accuracy = 87.840%                                  
+         Network trained                                            train.py:133
+12:01:17 Updating fragments used for training        accumulation_manager.py:272
+         Update images and labels used for training  accumulation_manager.py:257
+         Assigning identities to accumulated global  accumulation_manager.py:293
+         fragments                                                              
+         Using a sample of all accumulated images to test     accumulator.py:183
+         model's overall accuracy                                               
+         Creating test IdentificationDataset with 25721 images      train.py:287
+12:01:21 Current model has an overall accuracy of 94.234%     accumulator.py:189
+12:01:41 Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/accumulatio               
+         n_0/identification_network.model.pth                                   
+         Generating predictions on remaining global fragments accumulator.py:142
+         Predicting identities of 76507 images       accumulation_manager.py:703
+         Creating test IdentificationDataset with 76507 images      train.py:287
+12:01:47 Predicting identities (154 iterations). It took      _contextlib.py:115
+         0:00:05                                                                
+12:02:07 Computing fragment prediction statistics    accumulation_manager.py:311
+         Accumulating by global strategy             accumulation_manager.py:416
+         Global prediction results:                  accumulation_manager.py:392
+             Acceptable global fragments: 3                                     
+             Non acceptable global fragments: 68                                
+                 Non certain: 2                                                 
+                 Non significant: 35                                            
+                 Non consistent: 31                                             
+                 Non unique: 0                                                  
+         Global accumulation succeeded               accumulation_manager.py:431
+         There are global fragments acceptable for    accumulation_manager.py:79
+         training                                                               
+         Performing new accumulation, step 1                   accumulator.py:37
+         2538 new images for training                accumulation_manager.py:105
+         48438 old images for training               accumulation_manager.py:110
+         50976 images in total, 43.91% of the total  accumulation_manager.py:113
+         accumulable                                                            
+         Gathered 28259 labeled images (new and      accumulation_manager.py:186
+         used) for continuous training                                          
+         Loading identification images from disk (24           accumulator.py:58
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 25431 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 2828 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Entering the training loop...                              train.py:115
+12:03:02 Overfitting                                                train.py:131
+         Last epoch: Epoch 15: training loss = 0.13764, validation  train.py:132
+         loss = 0.42656 and accuracy = 86.987%                                  
+         Network trained                                            train.py:133
+12:03:42 Updating fragments used for training        accumulation_manager.py:272
+         Update images and labels used for training  accumulation_manager.py:257
+         Assigning identities to accumulated global  accumulation_manager.py:293
+         fragments                                                              
+         Using a sample of all accumulated images to test     accumulator.py:183
+         model's overall accuracy                                               
+         Creating test IdentificationDataset with 28259 images      train.py:287
+12:03:46 Current model has an overall accuracy of 92.632%     accumulator.py:189
+12:04:06 Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/accumulatio               
+         n_0/identification_network.model.pth                                   
+         Generating predictions on remaining global fragments accumulator.py:142
+         Predicting identities of 73969 images       accumulation_manager.py:703
+         Creating test IdentificationDataset with 73969 images      train.py:287
+12:04:11 Predicting identities (148 iterations). It took      _contextlib.py:115
+         0:00:04                                                                
+12:04:31 Computing fragment prediction statistics    accumulation_manager.py:311
+         Accumulating by global strategy             accumulation_manager.py:416
+         Global prediction results:                  accumulation_manager.py:392
+             Acceptable global fragments: 0                                     
+             Non acceptable global fragments: 68                                
+                 Non certain: 2                                                 
+                 Non significant: 60                                            
+                 Non consistent: 6                                              
+                 Non unique: 0                                                  
+         Global accumulation failed                  accumulation_manager.py:433
+         The ratio of accumulated images (43.91%) is accumulation_manager.py:440
+         too small and a partial accumulation might                             
+         fail.                                                                  
+         There are no more global fragments           accumulation_manager.py:79
+         acceptable for training                                                
+         No more new images to accumulate                         tracker.py:179
+         We did not accumulate enough images                      tracker.py:187
+         Saving first accumulation parameters                     tracker.py:192
+         Saving Session object in                                 tracker.py:125
+         /Users/gilraitses/Documents/Mirna                                      
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/session.jso               
+         n                                                                      
+         Saving ListOfFragments as                                tracker.py:125
+         /Users/gilraitses/Documents/Mirna                                      
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/preprocessi               
+         ng/list_of_fragments.json                                              
+         Saving ListOfFragments as                                tracker.py:125
+         /Users/gilraitses/Documents/Mirna                                      
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/accumulatio               
+         n_0/list_of_fragments.json                                             
+         Saving ListOfGlobalFragments at                          tracker.py:125
+         /Users/gilraitses/Documents/Mirna                                      
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/preprocessi               
+         ng/list_of_global_fragments.json                                       
+         FINISH Protocol 2, it took 0:06:15                        tracker.py:51
+         WARNING Protocol 2 failed, protocol 3 is going to start  tracker.py:131
+         Protocol 3 action: ask                                   tracker.py:383
+         Protocol 3 is a very time consuming algorithm and, in    tracker.py:413
+         most cases, it can be avoided by redefining the                        
+         segmentation parameters. As there are NOT frames with                  
+         more blobs than animals, the video is unlikely to have                 
+         non-animal blobs. Even so, you can choose to abort the                 
+         tracking session and redefine the segmentation                         
+         parameters (specially shrinking the intensity (or                      
+         background difference) thresholds) or to continue with                 
+         Protocol 3.                                                            
+What do you want to do now? Abort [A] or Continue [C]? C
+12:05:03 Answer --> Abort? False                                  tracker.py:434
+         START Protocol 3 pre-training                            tracker.py:139
+         Directory /Users/gilraitses/Documents/Mirna              tracker.py:139
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+          has been created                                                      
+         Saving NetworkParams at                            network_params.py:74
+         /Users/gilraitses/Documents/Mirna                                      
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to                     
+         436P_15_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1                     
+         /pretraining/model_params.json                                         
+         Directory /Users/gilraitses/Documents/Mirna              tracker.py:221
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+          already exists                                                        
+         Creating CNN model                                         models.py:12
+         Reinitializing model                                       models.py:47
+         Resetting ListOfFragments to 'fragmentation'             tracker.py:139
+         New pretraining iteration, using the #0 global fragment  tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 43589 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 4849 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:10:21 Overfitting                                                train.py:131
+         Last epoch: Epoch 42: training loss = 0.03070, validation  train.py:132
+         loss = 0.38390 and accuracy = 90.802%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:11:01 41.72% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #1 global fragment  tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 50100 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 5573 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:13:44 Overfitting                                                train.py:131
+         Last epoch: Epoch 19: training loss = 0.08376, validation  train.py:132
+         loss = 0.29138 and accuracy = 91.961%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:14:24 62.53% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #2 global fragment  tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 50127 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 5576 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:16:06 Overfitting                                                train.py:131
+         Last epoch: Epoch 15: training loss = 0.07932, validation  train.py:132
+         loss = 0.30291 and accuracy = 91.589%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:16:46 64.23% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #3 global fragment  tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 43980 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 4895 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:18:15 Overfitting                                                train.py:131
+         Last epoch: Epoch 15: training loss = 0.07002, validation  train.py:132
+         loss = 0.30265 and accuracy = 91.359%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:18:55 69.58% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #4 global fragment  tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 44302 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 4929 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:20:29 Overfitting                                                train.py:131
+         Last epoch: Epoch 15: training loss = 0.07151, validation  train.py:132
+         loss = 0.37857 and accuracy = 89.856%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:21:09 71.49% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #5 global fragment  tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 43865 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 4882 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:22:42 Overfitting                                                train.py:131
+         Last epoch: Epoch 15: training loss = 0.04970, validation  train.py:132
+         loss = 0.28283 and accuracy = 92.524%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:23:22 71.95% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #6 global fragment  tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 41675 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 4638 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:25:01 Overfitting                                                train.py:131
+         Last epoch: Epoch 15: training loss = 0.02893, validation  train.py:132
+         loss = 0.21191 and accuracy = 95.386%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:25:41 72.20% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #7 global fragment  tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 41017 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 4566 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:27:39 Overfitting                                                train.py:131
+         Last epoch: Epoch 15: training loss = 0.02297, validation  train.py:132
+         loss = 0.15053 and accuracy = 96.233%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:28:19 72.52% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #8 global fragment  tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 42110 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 4684 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:30:23 Overfitting                                                train.py:131
+         Last epoch: Epoch 15: training loss = 0.04381, validation  train.py:132
+         loss = 0.36591 and accuracy = 92.058%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:31:03 75.17% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #9 global fragment  tracker.py:241
+12:31:04 Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 43263 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 4813 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:33:32 Overfitting                                                train.py:131
+         Last epoch: Epoch 18: training loss = 0.04505, validation  train.py:132
+         loss = 0.25767 and accuracy = 93.788%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:34:12 75.44% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #10 global fragment tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 44154 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 4912 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:36:59 Overfitting                                                train.py:131
+         Last epoch: Epoch 19: training loss = 0.03358, validation  train.py:132
+         loss = 0.25890 and accuracy = 93.607%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:37:39 75.44% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #11 global fragment tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 48081 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 5348 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:40:06 Overfitting                                                train.py:131
+         Last epoch: Epoch 15: training loss = 0.04744, validation  train.py:132
+         loss = 0.24358 and accuracy = 93.904%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:40:46 77.54% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #12 global fragment tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 42057 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 4678 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:44:15 Overfitting                                                train.py:131
+         Last epoch: Epoch 25: training loss = 0.02940, validation  train.py:132
+         loss = 0.22323 and accuracy = 94.955%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:44:55 77.68% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #13 global fragment tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 40886 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 4551 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:47:01 Overfitting                                                train.py:131
+         Last epoch: Epoch 15: training loss = 0.01491, validation  train.py:132
+         loss = 0.18266 and accuracy = 95.935%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:47:41 77.86% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #14 global fragment tracker.py:241
+         Loading identification images from disk (23           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 28346 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 3155 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:49:01 Overfitting                                                train.py:131
+         Last epoch: Epoch 15: training loss = 0.06044, validation  train.py:132
+         loss = 0.50922 and accuracy = 88.685%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:49:41 88.25% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #15 global fragment tracker.py:241
+         Loading identification images from disk (23           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 28242 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 3143 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:51:02 Overfitting                                                train.py:131
+         Last epoch: Epoch 15: training loss = 0.04242, validation  train.py:132
+         loss = 0.34864 and accuracy = 91.823%                                  
+         Network trained                                            train.py:133
+         Saving model at /Users/gilraitses/Documents/Mirna        learners.py:92
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_1               
+         5_2_3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/pretraining               
+         /identification_network.model.pth                                      
+12:51:42 88.65% of the images have been used during pretraining   tracker.py:256
+         (if higher than 90.00% we stop pretraining)                            
+         New pretraining iteration, using the #16 global fragment tracker.py:241
+         Loading identification images from disk (24           pre_trainer.py:32
+         iterations). It took 0:00:00                                           
+         Creating training dataloader with 47211 images labeled     train.py:225
+         with 11 distinct classes                                               
+         Creating validation dataloader with 5251 images labeled    train.py:225
+         with 11 distinct classes                                               
+         Reinitializing only fully connected layers                 models.py:56
+         Entering the training loop...                              train.py:115
+12:51:58 ERROR An error occurred, saving data before printing          run.py:74
+         traceback and exiting the program                                      
+         Saving Session object in /Users/gilraitses/Documents/Mirna    run.py:78
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_3          
+         #T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/session.json                   
+         ERROR Error while saving data: [Errno 24] Too many open      run.py:108
+         files: '/Users/gilraitses/Documents/Mirna                              
+         Lab/videos/session_Gr21a@Chrimson(3)_T_Re_Sq_219to436P_15_2_           
+         3#T_Bl_Sq_2to7P_15_1_3_202402131442_3x_1/session.json'                 
+--- Logging error ---
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/base/run.py", line 43, in track_video
+    self.list_of_fragments = tracker_API(
+                             ^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/base/tracker/__init__.py", line 52, in tracker_API
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/base/tracker/tracker.py", line 51, in track
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/base/tracker/tracker.py", line 139, in accumulation_protocol
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/base/tracker/tracker.py", line 246, in pretrain
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/base/tracker/pre_trainer.py", line 78, in pretrain_global_fragment
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/base/network/train.py", line 119, in train_loop
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/base/network/train.py", line 163, in evaluate
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 434, in __iter__
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 387, in _get_iterator
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1022, in __init__
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/multiprocessing/context.py", line 103, in Queue
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/multiprocessing/queues.py", line 49, in __init__
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/multiprocessing/context.py", line 88, in BoundedSemaphore
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/multiprocessing/synchronize.py", line 152, in __init__
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/multiprocessing/synchronize.py", line 57, in __init__
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/utils/init_logger.py", line 115, in ret_fun
+    return main_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/start/__main__.py", line 78, in main
+    return RunIdTrackerAi(session).track_video()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/base/run.py", line 85, in track_video
+    copy(LOG_FILE_PATH, self.session.session_folder / LOG_FILE_PATH.name)
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/shutil.py", line 431, in copy
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/shutil.py", line 256, in copyfile
+OSError: [Errno 24] Too many open files: '/Users/gilraitses/idtrackerai.log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/logging.py", line 170, in emit
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1700, in print
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1332, in render
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/table.py", line 509, in __rich_console__
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/table.py", line 822, in _render
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1372, in render_lines
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/segment.py", line 291, in split_and_crop_lines
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1332, in render
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/padding.py", line 97, in __rich_console__
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1372, in render_lines
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/segment.py", line 291, in split_and_crop_lines
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1336, in render
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1336, in render
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1336, in render
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1332, in render
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/panel.py", line 224, in __rich_console__
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1372, in render_lines
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/segment.py", line 291, in split_and_crop_lines
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1332, in render
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/padding.py", line 97, in __rich_console__
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1372, in render_lines
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/segment.py", line 291, in split_and_crop_lines
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1336, in render
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/console.py", line 1332, in render
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/syntax.py", line 621, in __rich_console__
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/segment.py", line 667, in __init__
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/syntax.py", line 649, in _get_syntax
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/syntax.py", line 480, in highlight
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/syntax.py", line 433, in lexer
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/pygments/lexers/__init__.py", line 126, in get_lexer_by_name
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/pygments/lexers/__init__.py", line 45, in _load_lexers
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1130, in get_data
+OSError: [Errno 24] Too many open files: '/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/pygments/lexers/python.py'
+Call stack:
+  File "/opt/anaconda3/envs/idtrackerai/bin/idtrackerai", line 8, in <module>
+    sys.exit(main())
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/utils/init_logger.py", line 117, in ret_fun
+    manage_exception(exc)
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/idtrackerai/utils/init_logger.py", line 150, in manage_exception
+    logging.critical("%s: %s", type(exc).__name__, exc, exc_info=exc)
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/logging/__init__.py", line 2092, in critical
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/logging/__init__.py", line 1536, in critical
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/logging/__init__.py", line 1634, in _log
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/logging/__init__.py", line 1644, in handle
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/logging/__init__.py", line 1706, in callHandlers
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/logging/__init__.py", line 978, in handle
+  File "/opt/anaconda3/envs/idtrackerai/lib/python3.11/site-packages/rich/logging.py", line 172, in emit
+Message: '%s: %s'
+Arguments: ('OSError', OSError(24, 'Too many open files'))
+                                                              init_logger.py:151
+                                                                                
+         If this error happens right after the installation,                    
+         check our installation troubleshooting guide                           
+         https://idtracker.ai/latest/install/installation_tro                   
+         ubleshooting.html                                                      
+                                                                                
+         If this error persists please let us know by                           
+         following any of the following options:                                
+           - Posting on                                                         
+         https://groups.google.com/g/idtrackerai_users                          
+           - Opening an issue at                                                
+         https://gitlab.com/polavieja_lab/idtrackerai                           
+           - Sending an email to idtrackerai@gmail.com                          
+         Share the log file                                                     
+         (/Users/gilraitses/idtrackerai.log) when doing any                     
+         of the options above                                                   
+(idtrackerai) gilraitses@Gils-MacBook-Air ~ % 
